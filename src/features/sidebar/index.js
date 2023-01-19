@@ -4,21 +4,27 @@ import {
   Divider,
   Drawer,
   List,
-  /*   ListItem, 
-    ListItemButton, 
-    ListItemIcon, 
-    ListItemText,  */
   Toolbar,
 } from '@mui/material';
-/* import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail'; */
 import React from 'react';
-import { RouterLinks } from './RouterLinks';
-// import { Link, Outlet } from 'react-router-dom';
+import RouterLinkItem  from './RouterLinkItem';
+
 const drawerWidth = 240;
 
-
-
+const routes = [
+  {
+    name: 'Home',
+    url: `/blog`,
+  },
+  {
+    name: 'Profile',
+    url: `/blog/profile`,
+  },
+  {
+    name: 'New Post',
+    url: `/blog/post`,
+  },
+]
 
 const SidebarNav = () => {
 
@@ -62,7 +68,9 @@ const SidebarNav = () => {
         <Toolbar />
         <Divider />
         <List>
-          <RouterLinks />
+          {routes.map((route) => {
+            return <RouterLinkItem key={route.name} route={route} primary={route.name} />
+          })}
         </List>
       </Drawer>
     </Box>
