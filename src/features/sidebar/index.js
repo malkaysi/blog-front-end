@@ -1,13 +1,13 @@
 import {
   Box,
-  CssBaseline,
   Divider,
   Drawer,
   List,
   Toolbar,
 } from '@mui/material';
 import React from 'react';
-import RouterLinkItem  from './RouterLinkItem';
+import { Outlet } from 'react-router-dom';
+import RouterLinkItem from './RouterLinkItem';
 
 const drawerWidth = 240;
 
@@ -29,30 +29,7 @@ const routes = [
 const SidebarNav = () => {
 
   return (
-    /*  <div>
-       <div id="sidebar">
-         <h1>Blog Full-Stack API App</h1>
-         <nav>
-           <ul>
-             <li>
-               <Link to={`/blog`}>Home</Link>
-             </li>
-             <li>
-               <Link to={`/blog/profile`}>Profile</Link>
-             </li>
-             <li>
-               <Link to={`/blog/post`}>Post</Link>
-             </li>
-           </ul>
-         </nav>
-       </div>
-       <div id="detail">
-         <Outlet />
-       </div>
-     </div> */
-
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
+    <Box sx={{ display: 'flex' }} color='primary'>
       <Drawer
         sx={{
           width: drawerWidth,
@@ -72,6 +49,9 @@ const SidebarNav = () => {
             return <RouterLinkItem key={route.name} route={route} primary={route.name} />
           })}
         </List>
+        <div id="detail">
+         <Outlet />
+       </div>
       </Drawer>
     </Box>
   )
