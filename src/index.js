@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+/* import { createBrowserRouter } from 'react-router-dom';
 import Root from './routes/Root';
 import ErrorPage from './ErrorPage';
 import Home from './features/home';
 import Profile from './features/profile';
-import Post from './features/post';
+import Post from './features/post'; */
+import App from './App.js';
 
-const router = createBrowserRouter([
+/* const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
@@ -29,12 +30,13 @@ const router = createBrowserRouter([
       },
     ]
   },
-])
+]) */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <App />
   </React.StrictMode>
 );
 
