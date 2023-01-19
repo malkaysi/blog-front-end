@@ -29,7 +29,7 @@ const routes = [
 const SidebarNav = () => {
 
   return (
-    <Box sx={{ display: 'flex' }} color='primary'>
+    <Box sx={{ display: 'flex', bgcolor: 'background.paper' }} >
       <Drawer
         sx={{
           width: drawerWidth,
