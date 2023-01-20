@@ -4,24 +4,24 @@ import { Menu, Transition } from '@headlessui/react'
 import PropTypes from 'prop-types';
 import {
   BellIcon,
-  ScaleIcon,
+  // ScaleIcon,
 } from '@heroicons/react/24/outline'
 import {
-  BanknotesIcon,
+  // BanknotesIcon,
   BuildingOfficeIcon,
   CheckCircleIcon,
   ChevronDownIcon,
-  ChevronRightIcon,
+  // ChevronRightIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/20/solid'
 import SidebarNav from '../sidebar';
 import { Outlet } from 'react-router-dom';
 
-const cards = [
+/* const cards = [
   { name: 'Account balance', href: '#', icon: ScaleIcon, amount: '$30,659.45' },
   // More items...
-]
-const transactions = [
+] */
+/* const transactions = [
   {
     id: 1,
     name: 'Payment to Molly Sanders',
@@ -33,12 +33,12 @@ const transactions = [
     datetime: '2020-07-11',
   },
   // More transactions...
-]
-const statusStyles = {
+] */
+/* const statusStyles = {
   success: 'bg-green-100 text-green-800',
   processing: 'bg-yellow-100 text-yellow-800',
   failed: 'bg-gray-100 text-gray-800',
-}
+} */
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -222,12 +222,12 @@ export default function MainLayout() {
               </div>
             </div>
 
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 <h2 className="text-lg font-medium leading-6 text-gray-900">Overview</h2>
-                <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"> */}
                   {/* Card */}
-                  {cards.map((card) => (
+                  {/* {cards.map((card) => (
                     <div key={card.name} className="overflow-hidden rounded-lg bg-white shadow">
                       <div className="p-5">
                         <div className="flex items-center">
@@ -258,16 +258,16 @@ export default function MainLayout() {
 
               <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
                 Children test
-              </h2>
+              </h2> */}
 
               <Outlet />
 
-              <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
+              {/* <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
                 Recent activity
-              </h2>
+              </h2> */}
 
               {/* Activity list (smallest breakpoint only) */}
-              <div className="shadow sm:hidden">
+              {/* <div className="shadow sm:hidden">
                 <ul role="list" className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
                   {transactions.map((transaction) => (
                     <li key={transaction.id}>
@@ -310,10 +310,10 @@ export default function MainLayout() {
                     </a>
                   </div>
                 </nav>
-              </div>
+              </div> */}
 
               {/* Activity table (small breakpoint and up) */}
-              <div className="hidden sm:block">
+              {/* <div className="hidden sm:block">
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                   <div className="mt-2 flex flex-col">
                     <div className="min-w-full overflow-hidden overflow-x-auto align-middle shadow sm:rounded-lg">
@@ -382,9 +382,9 @@ export default function MainLayout() {
                             </tr>
                           ))}
                         </tbody>
-                      </table>
+                      </table> */}
                       {/* Pagination */}
-                      <nav
+                      {/* <nav
                         className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
                         aria-label="Pagination"
                       >
@@ -411,9 +411,9 @@ export default function MainLayout() {
                       </nav>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </div> 
+              </div> 
+            </div> */}
           </main>
         </div>
       </div>
