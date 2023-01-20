@@ -6,7 +6,7 @@ import {
   Toolbar,
 } from '@mui/material';
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
 import RouterLinkItem from './RouterLinkItem';
 
 const drawerWidth = 240;
@@ -49,9 +49,6 @@ const SidebarNav = () => {
             return <RouterLinkItem key={route.name} route={route} primary={route.name} />
           })}
         </List>
-        <div id="detail">
-         <Outlet />
-       </div>
       </Drawer>
     </Box>
   )
