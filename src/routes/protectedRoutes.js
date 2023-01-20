@@ -1,15 +1,12 @@
 import React from 'react';
-// import { Outlet } from 'react-router-dom';
 import Home from '../features/home';
-import TailwindHome from '../features/Layout/TailwindHome';
+import MainLayout from '../features/Layout/MainLayout';
 import Post from '../features/post';
 import Profile from '../features/profile';
-// import SidebarNav from '../features/sidebar';
 
 const App = () => {
   return (
-    <TailwindHome />
-    // <SidebarNav />
+    <MainLayout />
   )
 }
 export const protectedRoutes = [
