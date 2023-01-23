@@ -221,53 +221,14 @@ export default function MainLayout() {
                 </div>
               </div>
             </div>
+            <Outlet />
 
-            {/* <div className="mt-8">
-              <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                <h2 className="text-lg font-medium leading-6 text-gray-900">Overview</h2>
-                <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"> */}
-                  {/* Card */}
-                  {/* {cards.map((card) => (
-                    <div key={card.name} className="overflow-hidden rounded-lg bg-white shadow">
-                      <div className="p-5">
-                        <div className="flex items-center">
-                          <div className="flex-shrink-0">
-                            <card.icon className="h-6 w-6 text-gray-400" aria-hidden="true" />
-                          </div>
-                          <div className="ml-5 w-0 flex-1">
-                            <dl>
-                              <dt className="truncate text-sm font-medium text-gray-500">{card.name}</dt>
-                              <dd>
-                                <div className="text-lg font-medium text-gray-900">{card.amount}</div>
-                              </dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="bg-gray-50 px-5 py-3">
-                        <div className="text-sm">
-                          <a href={card.href} className="font-medium text-cyan-700 hover:text-cyan-900">
-                            View all
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
-                Children test
-              </h2> */}
-
-              <Outlet />
-
-              {/* <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
+            {/* <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
                 Recent activity
               </h2> */}
 
-              {/* Activity list (smallest breakpoint only) */}
-              {/* <div className="shadow sm:hidden">
+            {/* Activity list (smallest breakpoint only) */}
+            {/* <div className="shadow sm:hidden">
                 <ul role="list" className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
                   {transactions.map((transaction) => (
                     <li key={transaction.id}>
@@ -312,8 +273,8 @@ export default function MainLayout() {
                 </nav>
               </div> */}
 
-              {/* Activity table (small breakpoint and up) */}
-              {/* <div className="hidden sm:block">
+            {/* Activity table (small breakpoint and up) */}
+            {/* <div className="hidden sm:block">
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                   <div className="mt-2 flex flex-col">
                     <div className="min-w-full overflow-hidden overflow-x-auto align-middle shadow sm:rounded-lg">
@@ -383,8 +344,8 @@ export default function MainLayout() {
                           ))}
                         </tbody>
                       </table> */}
-                      {/* Pagination */}
-                      {/* <nav
+            {/* Pagination */}
+            {/* <nav
                         className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
                         aria-label="Pagination"
                       >
