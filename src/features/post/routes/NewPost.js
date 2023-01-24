@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Post = () => {
+const NewPost = () => {
   // Create a new post
 
   return (
     <div>
-      Create a new post page
+      New Post Form
     </div>
   )
 };
 
-export default Post;
+export default NewPost;

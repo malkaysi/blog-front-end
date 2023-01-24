@@ -65,6 +65,7 @@ const Home = () => {
   const [publishedPosts, setPublishedPosts] = useState([]);
 
 
+  // Grabbing published posts from api on page load
   useEffect(() => {
     (async () => {
       const postResult = await getPublishedPosts();
