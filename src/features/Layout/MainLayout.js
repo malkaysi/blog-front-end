@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import PropTypes from 'prop-types';
@@ -16,6 +16,7 @@ import {
 } from '@heroicons/react/20/solid'
 import SidebarNav from '../sidebar';
 import { Outlet } from 'react-router-dom';
+import { CircularProgress } from '@mui/material';
 
 /* const cards = [
   { name: 'Account balance', href: '#', icon: ScaleIcon, amount: '$30,659.45' },
@@ -221,7 +222,17 @@ export default function MainLayout() {
                 </div>
               </div>
             </div>
-            <Outlet />
+
+
+            <Suspense
+              fallback={
+                <div className="h-full w-full flex items-center justify-center">
+                  <CircularProgress />
+                </div>
+              }
+            >
+              <Outlet />
+            </Suspense>
 
             {/* <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
                 Recent activity
